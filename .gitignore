@@ -1,0 +1,4 @@
+# Virtualenv related
+bin/
+include/
+venv
