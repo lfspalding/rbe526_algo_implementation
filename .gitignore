@@ -1,3 +1,4 @@
-# Virtualenv related
 
-venv
+venv/
+.idea
+__pycache__/
