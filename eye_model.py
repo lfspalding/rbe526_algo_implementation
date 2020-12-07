@@ -48,9 +48,10 @@ class eye_disp:
     yaw (y-axis) -1 to 1
     distance (mirror correction to x) 0 to 1
     """
-    def look(self, pitch, yaw, distance):
+    def look(self, pitch, yaw, dist):
         f1 = .05  # factor correction for direction of gaze
         f2 = .01  # factor correction for distance of gaze
+        distance = 1-dist
 
         # Update Y
         y = self.y_max/2 + (self.x_max * f1 * yaw)
