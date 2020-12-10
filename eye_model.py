@@ -51,7 +51,7 @@ class eye_disp:
     def look(self, pitch, yaw, dist):
         f1 = .05  # factor correction for direction of gaze
         f2 = .01  # factor correction for distance of gaze
-        distance = 1-dist
+        distance = 1 - dist
 
         # Update Y
         y = self.y_max/2 + (self.x_max * f1 * yaw)
@@ -75,7 +75,7 @@ class eye_disp:
 
         # Update label
         self.label.undraw()
-        self.label = Text(Point(self.x_max/2, self.y_max-50), f"Looking ({pitch}, {yaw}, {distance}).")
+        self.label = Text(Point(self.x_max/2, self.y_max-50), "Looking ({pitch}, {yaw}, {distance}).".format(pitch=pitch, yaw=yaw, distance=dist))
         self.label.draw(self.win)
 
     def follow_mouse_click(self, duration):
